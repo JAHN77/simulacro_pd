@@ -1,0 +1,22 @@
+.hero{
+    min-height: 90vh;
+
+    display:flex;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f8f9fa,
+        #ffffff
+    );
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:700;
+}
+
+.about{
+    padding:100px 0;
+}

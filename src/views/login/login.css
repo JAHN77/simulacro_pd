@@ -1,0 +1,18 @@
+.login-page {
+  min-height: calc(100vh - 160px);
+
+  display: flex;
+  align-items: center;
+
+  padding: 4rem 0;
+
+  background: linear-gradient(
+    135deg,
+    #f8f9fa,
+    #ffffff
+  );
+}
+
+.card {
+  border-radius: 16px;
+}
