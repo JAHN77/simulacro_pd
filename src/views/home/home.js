@@ -22,13 +22,5 @@ export const homeView = {
 
   init() {
     navbarComponent.init();
-
-    document.querySelector('.btn-comenzar')?.addEventListener('click', () => {
-      window.location.hash = '#/login';
-    });
-
-    document.querySelector('.btn-cta')?.addEventListener('click', () => {
-      window.location.hash = '#/login';
-    });
   },
 };

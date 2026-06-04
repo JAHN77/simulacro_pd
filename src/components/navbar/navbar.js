@@ -6,7 +6,7 @@ export const navbarComponent = {
     return `
       <nav class="navbar navbar-dark bg-primary shadow-sm app-navbar sticky-top">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="#/dashboard">
+          <a class="navbar-brand fw-bold" data-navigate="/dashboard" href="#">
             <i class="bi bi-buildings-fill me-2"></i>ProjectManager
           </a>
 
@@ -37,7 +37,7 @@ export const navbarComponent = {
               <button class="btn btn-sm btn-outline-light" id="btn-dark-mode" title="Cambiar tema">
                 <i class="bi bi-moon-stars-fill" id="dark-mode-icon"></i>
               </button>
-              <a href="#/login" class="btn btn-sm btn-light fw-semibold">Iniciar Sesión</a>
+              <a data-navigate="/login" href="#" class="btn btn-sm btn-light fw-semibold">Iniciar Sesión</a>
             </div>
           `}
         </div>

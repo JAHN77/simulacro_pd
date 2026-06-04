@@ -14,7 +14,7 @@ export function CTA() {
           Empieza hoy mismo.
         </p>
 
-        <a href="#/login" class="btn btn-primary btn-lg btn-cta">
+        <a data-navigate="/login" href="#" class="btn btn-primary btn-lg btn-cta">
           Iniciar Sesión
         </a>
 

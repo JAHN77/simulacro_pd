@@ -24,7 +24,7 @@ export const authService = {
 
   logout() {
     localStorage.removeItem(SESSION_KEY);
-    window.location.hash = '#/login';
+    window.router?.navigate?.('/login') || (window.location.pathname = '/simulacro_pd/login');
   },
 
   getCurrentUser() {

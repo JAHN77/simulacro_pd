@@ -102,7 +102,7 @@ export const loginView = {
 
       try {
         await authService.login(email, password);
-        window.location.hash = '#/dashboard';
+        window.router?.navigate('/dashboard');
       } catch (err) {
         alert.classList.remove('d-none');
         alertMsg.textContent = err.message;

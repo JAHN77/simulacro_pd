@@ -3,7 +3,9 @@ import { authService } from '../../services/auth.service.js';
 
 export const sidebarComponent = {
   render(user) {
-    const hash = window.location.hash.slice(1) || '/dashboard';
+    const pathname = window.location.pathname;
+    const basePath = '/simulacro_pd';
+    const currentPath = pathname.startsWith(basePath) ? pathname.slice(basePath.length) : pathname;
     const isManager = user?.role === 'manager';
 
     return `
@@ -22,12 +24,12 @@ export const sidebarComponent = {
 
           <ul class="nav flex-column px-2 mt-2">
             <li class="nav-item">
-              <a class="nav-link sidebar-link ${hash === '/dashboard' ? 'active' : ''}" href="#/dashboard">
+              <a class="nav-link sidebar-link ${currentPath === '/dashboard' ? 'active' : ''}" data-navigate="/dashboard" href="#">
                 <i class="bi bi-speedometer2 me-2"></i>Dashboard
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link sidebar-link ${hash === '/projects' ? 'active' : ''}" href="#/projects">
+              <a class="nav-link sidebar-link ${currentPath === '/projects' ? 'active' : ''}" data-navigate="/projects" href="#">
                 <i class="bi bi-folder2-open me-2"></i>Proyectos
               </a>
             </li>
@@ -38,7 +40,7 @@ export const sidebarComponent = {
                 </small>
               </li>
               <li class="nav-item">
-                <a class="nav-link sidebar-link" href="#/projects">
+                <a class="nav-link sidebar-link" data-navigate="/projects" href="#">
                   <i class="bi bi-plus-circle me-2"></i>Gestionar
                 </a>
               </li>

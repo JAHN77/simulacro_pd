@@ -19,7 +19,7 @@ export function Hero() {
               clientes y operaciones desde un solo lugar.
             </p>
 
-            <a href="#/login" class="btn btn-primary btn-lg btn-comenzar">
+            <a data-navigate="/login" href="#" class="btn btn-primary btn-lg btn-comenzar">
               Comenzar Ahora
             </a>
 

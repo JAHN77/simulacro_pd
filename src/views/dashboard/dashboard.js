@@ -149,7 +149,7 @@ export const dashboardView = {
           </div>
         </div>
         <div class="card-footer bg-transparent text-end border-0 pb-3">
-          <a href="#/projects" class="btn btn-sm btn-outline-primary">
+          <a data-navigate="/projects" href="#" class="btn btn-sm btn-outline-primary">
             Ver todos <i class="bi bi-arrow-right ms-1"></i>
           </a>
         </div>
