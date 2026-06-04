@@ -19,9 +19,9 @@ export function Hero() {
               clientes y operaciones desde un solo lugar.
             </p>
 
-            <button class="btn btn-primary btn-lg">
+            <a href="#/login" class="btn btn-primary btn-lg btn-comenzar">
               Comenzar Ahora
-            </button>
+            </a>
 
           </div>
 

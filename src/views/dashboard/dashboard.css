@@ -1,8 +1,63 @@
-.dashboard-card{
+.main-content {
+  min-height: calc(100vh - 56px);
+  background: var(--bg-secondary);
+}
 
-    background:var(--card-bg);
+.stat-card {
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    border:1px solid var(--border-color);
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.18) !important;
+}
 
-    border-radius:12px;
+.stat-icon {
+  flex-shrink: 0;
+}
+
+/* ── Dark mode ─────────────────────────────────────────── */
+
+[data-theme="dark"] .main-content {
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .card {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-header,
+[data-theme="dark"] .card-footer {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Stat icon circles need a muted bg in dark mode */
+[data-theme="dark"] .bg-primary-subtle {
+  background-color: rgba(77, 171, 247, 0.15) !important;
+}
+
+[data-theme="dark"] .bg-success-subtle {
+  background-color: rgba(34, 197, 94, 0.15) !important;
+}
+
+[data-theme="dark"] .bg-info-subtle {
+  background-color: rgba(6, 182, 212, 0.15) !important;
+}
+
+[data-theme="dark"] .text-primary {
+  color: #4dabf7 !important;
+}
+
+[data-theme="dark"] .text-success {
+  color: #4ade80 !important;
+}
+
+[data-theme="dark"] .text-info {
+  color: #22d3ee !important;
 }

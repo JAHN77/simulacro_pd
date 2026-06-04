@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Manager",
+      "email": "manager@test.com",
+      "password": "123456",
+      "role": "manager"
+    },
+    {
+      "id": "2",
+      "name": "Collaborator",
+      "email": "user@test.com",
+      "password": "123456",
+      "role": "collaborator"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "name": "Corporate Website Redesign",
+      "description": "Complete redesign of the corporate website with modern UI/UX standards and improved performance.",
+      "status": "In Progress",
+      "createdAt": "2025-01-15",
+      "assignedTo": 2
+    },
+    {
+      "id": "2",
+      "name": "Mobile App Development",
+      "description": "Develop a cross-platform mobile application for client relationship management.",
+      "status": "Active",
+      "createdAt": "2025-02-10",
+      "assignedTo": 2
+    },
+    {
+      "id": "3",
+      "name": "API Integration Platform",
+      "description": "Build a centralized platform to integrate third-party APIs for data synchronization.",
+      "status": "Completed",
+      "createdAt": "2025-03-05",
+      "assignedTo": 2
+    },
+    {
+      "id": "5",
+      "name": "Cloud Migration",
+      "description": "Migrate legacy on-premise infrastructure to AWS cloud services.",
+      "status": "Active",
+      "createdAt": "2025-05-01",
+      "assignedTo": 1
+    },
+    {
+      "name": "prueba de test",
+      "description": "hay que rectificar los test creados",
+      "status": "Pending",
+      "assignedTo": 2,
+      "createdAt": "2026-06-04",
+      "id": "jKt0DpTrQJE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

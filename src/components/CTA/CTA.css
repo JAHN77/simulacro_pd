@@ -1,3 +1,4 @@
 .cta {
-  background-color: #f8f9fa;
+  background-color: var(--bg-secondary);
+  transition: background 0.3s ease;
 }

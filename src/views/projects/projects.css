@@ -1,0 +1,103 @@
+.project-card {
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.18) !important;
+}
+
+/* ── Dark mode ─────────────────────────────────────────── */
+
+[data-theme="dark"] .card {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-header {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Table cell backgrounds — target the actual cells */
+[data-theme="dark"] .table > :not(caption) > * > * {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border-bottom-color: #3a3a3a;
+}
+
+[data-theme="dark"] .table > thead > tr > th {
+  background-color: #1e1e1e !important;
+  color: #adb5bd !important;
+  border-bottom-color: #3a3a3a !important;
+}
+
+[data-theme="dark"] .table-hover > tbody > tr:hover > * {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #f0f0f0;
+}
+
+/* Action buttons in dark table */
+[data-theme="dark"] .btn-outline-primary {
+  color: #4dabf7;
+  border-color: #4dabf7;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+  background-color: rgba(77, 171, 247, 0.15);
+  color: #90c8f6;
+  border-color: #90c8f6;
+}
+
+[data-theme="dark"] .btn-outline-danger {
+  color: #f87171;
+  border-color: #f87171;
+}
+
+[data-theme="dark"] .btn-outline-danger:hover {
+  background-color: rgba(248, 113, 113, 0.15);
+  color: #fca5a5;
+  border-color: #fca5a5;
+}
+
+/* Forms */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .input-group-text {
+  background-color: #1e1e1e;
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  background-color: #252525;
+  border-color: #4dabf7;
+  box-shadow: 0 0 0 0.25rem rgba(77, 171, 247, 0.2);
+}
+
+/* Modals */
+[data-theme="dark"] .modal-content {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(1);
+}
+
+/* Search input group */
+[data-theme="dark"] .input-group > .form-control.border-start-0,
+[data-theme="dark"] .input-group > .input-group-text.bg-white {
+  background-color: #1e1e1e !important;
+  border-color: var(--border-color) !important;
+}

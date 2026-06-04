@@ -1,34 +1,34 @@
-import { Navbar } from "../../components/navbar/navbar.js";
-import { Hero } from "../../components/hero/hero.js";
-import { About } from "../../components/about/about.js";
-import { Features } from "../../components/features/features.js";
-import { CTA } from "../../components/CTA/CTA.js";
-import { Footer } from "../../components/footer/footer.js";
+import './home.css';
+import { navbarComponent } from '../../components/navbar/navbar.js';
+import { Hero } from '../../components/hero/hero.js';
+import { About } from '../../components/about/about.js';
+import { Features } from '../../components/features/features.js';
+import { CTA } from '../../components/CTA/CTA.js';
+import { Footer } from '../../components/footer/footer.js';
 
-export function Home() {
+export const homeView = {
+  render() {
+    return `
+      ${navbarComponent.render(null)}
+      <main>
+        ${Hero()}
+        ${About()}
+        ${Features()}
+        ${CTA()}
+      </main>
+      ${Footer()}
+    `;
+  },
 
-  return `
-  
-    ${Navbar()}
-    
-    <main>
+  init() {
+    navbarComponent.init();
 
-      ${Hero()}
+    document.querySelector('.btn-comenzar')?.addEventListener('click', () => {
+      window.location.hash = '#/login';
+    });
 
-      ${About()}
-
-      ${Features()}
-
-      ${CTA()}
-
-    </main>
-
-    ${Footer()}
-  `;
-
-
-
-
-}
-
- 
+    document.querySelector('.btn-cta')?.addEventListener('click', () => {
+      window.location.hash = '#/login';
+    });
+  },
+};

@@ -13,8 +13,228 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
+}
 
-body{
-    background:var(--bg-primary);
-    color:var(--text-primary);
+/* ── Dark Mode Bootstrap overrides ───────────────────────── */
+
+[data-theme="dark"] .bg-white {
+  background-color: var(--card-bg) !important;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #1e1e1e !important;
+}
+
+[data-theme="dark"] .bg-body-secondary {
+  background-color: var(--bg-secondary) !important;
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .text-dark {
+  color: var(--text-primary) !important;
+}
+
+/* Cards */
+[data-theme="dark"] .card {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-header {
+  background-color: rgba(255,255,255,0.04) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .card-footer {
+  background-color: rgba(255,255,255,0.02) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Tables ─────────────────────────────────────────────────── */
+
+/* Override Bootstrap's internal table CSS variables */
+[data-theme="dark"] .table {
+  --bs-table-bg: #252525;
+  --bs-table-color: #e9ecef;
+  --bs-table-border-color: #3a3a3a;
+  --bs-table-striped-bg: #2a2a2a;
+  --bs-table-striped-color: #e9ecef;
+  --bs-table-hover-bg: rgba(255, 255, 255, 0.05);
+  --bs-table-hover-color: #e9ecef;
+  --bs-table-active-bg: rgba(255, 255, 255, 0.08);
+  color: #e9ecef;
+  border-color: #3a3a3a;
+}
+
+/* thead with .table-light class */
+[data-theme="dark"] .table-light {
+  --bs-table-bg: #1e1e1e;
+  --bs-table-color: #adb5bd;
+  --bs-table-border-color: #3a3a3a;
+  color: #adb5bd;
+}
+
+/* Force the actual <th> and <td> cells — Bootstrap 5.3 applies
+   background via a pseudo-element, so we need both the variable
+   and a direct background-color to win the specificity fight. */
+[data-theme="dark"] .table > :not(caption) > * > * {
+  background-color: var(--bs-table-bg);
+  color: var(--bs-table-color);
+  border-bottom-color: #3a3a3a;
+}
+
+[data-theme="dark"] .table > thead > tr > th {
+  background-color: #1e1e1e !important;
+  color: #adb5bd !important;
+  border-bottom-color: #3a3a3a !important;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+[data-theme="dark"] .table-hover > tbody > tr:hover > * {
+  --bs-table-hover-bg: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] .table-responsive {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* Forms */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background-color: #1e1e1e;
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: #555;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  background-color: #252525;
+  color: var(--text-primary);
+  border-color: #4dabf7;
+  box-shadow: 0 0 0 0.25rem rgba(77, 171, 247, 0.2);
+}
+
+[data-theme="dark"] .form-select option {
+  background-color: #1e1e1e;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .input-group-text {
+  background-color: #1e1e1e;
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+/* Modals */
+[data-theme="dark"] .modal-content {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(1);
+}
+
+/* Alerts */
+[data-theme="dark"] .alert-info {
+  background-color: rgba(77, 171, 247, 0.12);
+  border-color: rgba(77, 171, 247, 0.25);
+  color: #90cdf4;
+}
+
+[data-theme="dark"] .alert-danger {
+  background-color: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .alert-success {
+  background-color: rgba(34, 197, 94, 0.12);
+  border-color: rgba(34, 197, 94, 0.25);
+  color: #86efac;
+}
+
+/* Badges */
+[data-theme="dark"] .bg-warning {
+  background-color: #f59e0b !important;
+}
+
+/* Borders */
+[data-theme="dark"] .border,
+[data-theme="dark"] [class*="border-"] {
+  border-color: var(--border-color) !important;
+}
+
+/* Home page sections */
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #1a1d21, #252830) !important;
+}
+
+[data-theme="dark"] #about {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] #features {
+  background-color: #1a1a1a !important;
+}
+
+[data-theme="dark"] .cta {
+  background-color: var(--bg-secondary) !important;
+}
+
+[data-theme="dark"] footer.footer {
+  background-color: #0a0a0a !important;
+}
+
+/* Button outline variants in dark mode */
+[data-theme="dark"] .btn-outline-secondary {
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+  background-color: #333;
+  border-color: #555;
+  color: var(--text-primary);
+}
+
+/* Form text / helper text */
+[data-theme="dark"] .form-text {
+  color: var(--text-secondary);
+}
+
+/* Dropdown */
+[data-theme="dark"] .dropdown-menu {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+  background-color: rgba(255,255,255,0.06);
 }

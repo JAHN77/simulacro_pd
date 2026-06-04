@@ -14,9 +14,9 @@ export function CTA() {
           Empieza hoy mismo.
         </p>
 
-        <button class="btn btn-primary btn-lg">
-          Crear Cuenta
-        </button>
+        <a href="#/login" class="btn btn-primary btn-lg btn-cta">
+          Iniciar Sesión
+        </a>
 
       </div>
 

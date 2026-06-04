@@ -1,0 +1,4 @@
+#about {
+  background-color: var(--bg-primary);
+  transition: background 0.3s ease;
+}

@@ -1,39 +1,33 @@
-:root{
+:root {
+  /* Backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f6f9;
 
-    /* BACKGROUNDS */
+  /* Text */
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
 
-    --bg-primary:#ffffff;
-    --bg-secondary:#f8f9fa;
+  /* Cards */
+  --card-bg: #ffffff;
 
-    /* TEXT */
+  /* Borders */
+  --border-color: #dee2e6;
 
-    --text-primary:#212529;
-    --text-secondary:#6c757d;
+  /* Brand */
+  --primary: #0d6efd;
 
-    /* CARDS */
-
-    --card-bg:#ffffff;
-
-    /* BORDERS */
-
-    --border-color:#dee2e6;
-
-    /* BRAND */
-
-    --primary:#0d6efd;
+  /* Sidebar */
+  --sidebar-bg: #1a1d21;
+  --sidebar-width: 250px;
 }
 
-[data-theme="dark"]{
-
-    --bg-primary:#121212;
-    --bg-secondary:#1e1e1e;
-
-    --text-primary:#ffffff;
-    --text-secondary:#bdbdbd;
-
-    --card-bg:#252525;
-
-    --border-color:#444444;
-
-    --primary:#4dabf7;
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #e9ecef;
+  --text-secondary: #adb5bd;
+  --card-bg: #252525;
+  --border-color: #3a3a3a;
+  --primary: #4dabf7;
+  --sidebar-bg: #111;
 }
