@@ -1,5 +1,5 @@
 import { Navbar } from "../../components/navbar/navbar.js";
-import { Footer } from "../../components/Footer/footer.js";
+import { Footer } from "../../components/footer/footer.js";
 
 import "./login.css";
 
