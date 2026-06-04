@@ -262,8 +262,13 @@ export const projectsView = {
 
       container.querySelectorAll('[data-action="edit"]').forEach((btn) => {
         btn.addEventListener('click', () => {
-          const p = projectsView._all.find((x) => x.id === parseInt(btn.dataset.id));
-          projectsView._openEdit(p);
+          const projectId = btn.dataset.id;
+          const p = projectsView._all.find((x) => String(x.id) === String(projectId));
+          if (p) {
+            projectsView._openEdit(p);
+          } else {
+            showToast('Proyecto no encontrado', 'warning');
+          }
         });
       });
 
@@ -319,6 +324,10 @@ export const projectsView = {
   },
 
   _openEdit(p) {
+    if (!p) {
+      showToast('Error: Proyecto no encontrado', 'danger');
+      return;
+    }
     document.getElementById('modal-title').textContent = 'Editar Proyecto';
     document.getElementById('f-id').value = p.id;
     document.getElementById('f-name').value = p.name;

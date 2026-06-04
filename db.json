@@ -17,14 +17,6 @@
   ],
   "projects": [
     {
-      "id": "1",
-      "name": "Corporate Website Redesign",
-      "description": "Complete redesign of the corporate website with modern UI/UX standards and improved performance.",
-      "status": "In Progress",
-      "createdAt": "2025-01-15",
-      "assignedTo": 2
-    },
-    {
       "id": "2",
       "name": "Mobile App Development",
       "description": "Develop a cross-platform mobile application for client relationship management.",
@@ -55,6 +47,14 @@
       "assignedTo": 2,
       "createdAt": "2026-06-04",
       "id": "jKt0DpTrQJE"
+    },
+    {
+      "name": "Prueba front",
+      "description": "validacion de todas las funcioanlidades del front",
+      "status": "In Progress",
+      "assignedTo": 2,
+      "createdAt": "2026-06-04",
+      "id": "VtPgKjyLWyc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
